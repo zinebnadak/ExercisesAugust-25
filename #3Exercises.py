@@ -54,6 +54,75 @@ elif minutes >= 33 and minutes <=66:                #use "and" not "or" to get i
 elif minutes > 66:
     print ("Buy a Plus package!")
 
+
+
+1. Skriv ett program som läser in två decimaltal från användaren och kontrollerar vilket av dessa som är större.
+Några programkörningar kan t.ex. se ut som nedan:
+
+(Med två anrop till input)
+
+Ange värde 1: 4.5
+Ange värde 2: 2.3
+4.5 är större än 2.3
+(Med input + split)
+
+Ange två värden: 4.5 6.7
+6.7 är större än 4.5
+
+Ange två värden: 4.5 4.5
+Värdena är lika stora
+
+
+2. Det traditionella antagandet att sju människoår motsvarar ett hundår är en förenkling av verkligheten. En mera realistisk uppskattning för en medelstor hund är:
+första hundåret = 15 människoår
+andra hundåret = 9 människoår
+varje därpå följande hundår = 5 människoår
+Skriv ett program som låter användaren ange hundår och räknar ut motsvarande människoår. Några programkörningar kan t.ex. se ut enligt följande:
+
+Hur många hundår? 1
+Människoår: 15
+
+Hur många hundår? 2
+Människoår: 24             <= 15+9
+
+Hur många hundår? 5
+Människoår: 39             <= 15+9+5+5+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Write a program that reads in integers n and calculates sum, 1+2+3+4+...+n
 print()
 n = int(input("Enter value for n: "))
@@ -66,7 +135,7 @@ while k <= n:
     k= k+1         #then add k (1) for next time
 print ("The sum is:", sum)
 
-#Write a program that reads in integers n and calculates sum, 1+4+9+16+...+n^2
+---------> #Write a program that reads in integers n and calculates sum, 1+4+9+16+...+n^2
 print()
 n = int(input("Enter value of n: "))
 
@@ -79,7 +148,7 @@ while k <= n:
     k=k+1
 print ("The sum is", sum)
 
-#Suppose a ball is dropped onto a floor and with each bounce it loses 30% of its height. Write a program that calculates how many times such a ball bounces before it comes to rest. (By “comes to rest,” we mean that it no longer bounces higher than 1 cm.) As input, the program should let the user specify the height, measured in meters, from which the ball is dropped.
+---------> #Suppose a ball is dropped onto a floor and with each bounce it loses 30% of its height. Write a program that calculates how many times such a ball bounces before it comes to rest. (By “comes to rest,” we mean that it no longer bounces higher than 1 cm.) As input, the program should let the user specify the height, measured in meters, from which the ball is dropped.
 height = float(input("Enter the height you are trowing the ball from (in meters):" ))
 
 start_height = height   # Save the initial height before it changes to use it in print at the end
@@ -92,7 +161,7 @@ while height >= 0.01:      #keep looping and register bounces and stop when heig
 print (f"If you drop a ball from {start_height} meters it will bounce {times_bounced} times, before stopping. ")
 
 
-#Write a program that reads in the last integer( n) and calculates sum, 1+4+9+16+...+n^2, but this time use for-loop instead of while loop.
+---------------> #Write a program that reads in the last integer( n) and calculates sum, 1+4+9+16+...+n^2, but this time use for-loop instead of while loop.
 
 #iterate trough the numbers from 1 to n
 #square each number
@@ -106,6 +175,24 @@ for i in range (1,n+1,1):               #range(1, n+1) The sequence will go up t
     sum= sum+(i*i)
 
 print(f"The sum of squares from 1 to {n} is: {sum}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #the program calculate the value of the expression 2*(x**2)-5*x+1 for each value of x in the range -10 to 10, and prints result in a neat way.
 print()
