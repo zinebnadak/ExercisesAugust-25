@@ -177,7 +177,7 @@ elif 6 <= (len(password)) >= 10:
     pass
 
 elif (len(password)) > 10:
-    print("password is strong")
+    print("Password is strong")
     print ("Good password, Please remember your password or write it down!")
 
 

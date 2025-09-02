@@ -37,6 +37,60 @@ while height >= 0.01:      #keep looping and register bounces and stop when heig
 
 print (f"If you drop a ball from {start_height} meters it will bounce {times_bounced} times, before stopping. ")
 
+#At a very dangerous workplace, the following salary is offered: on the first day you earn 0.01 euro, and then the salary doubles each day. Write a program that calculates how long you need to work in order to earn 1 million euros.
+current_day = 1
+daily_salary = 0.01
+total_money_earned_so_far = 0.01
+
+while total_money_earned_so_far < 1000000:       #Use a while loop, because you don’t know in advance how many days it will take.# target = 10 million €
+    current_day = current_day+1
+    daily_salary = daily_salary*2       #each day the salary doubles
+    total_money_earned_so_far = daily_salary + total_money_earned_so_far    #adding each day’s salary to the total.
+
+print (f"To earn 1 000 000 euros, you would need to work {current_day} days!")
+
+#Write similar program that lets you choose your goal, and by entering your daily salary lets you know how many days it will take you to surpass you goal
+goal = int(input("How much do you aim to earn?: "))
+salary = int(input("How much do you earn each day?: "))
+
+current_day = 1
+daily_salary = salary
+total_money_so_far = salary
+
+while total_money_so_far<goal:      #what will happen after every day?
+    current_day = current_day +1
+    total_money_so_far = total_money_so_far + daily_salary
+print (f"To earn {goal} € you would need to work {current_day} days!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---------------> #Write a program that reads in the last integer( n) and calculates sum, 1+4+9+16+...+n^2, but this time use for-loop instead of while loop.
 
@@ -52,23 +106,6 @@ for i in range (1,n+1,1):               #range(1, n+1) The sequence will go up t
     sum= sum+(i*i)
 
 print(f"The sum of squares from 1 to {n} is: {sum}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #the program calculate the value of the expression 2*(x**2)-5*x+1 for each value of x in the range -10 to 10, and prints result in a neat way.
@@ -143,32 +180,6 @@ for attempt in range(1,max_tries+1):
 print ("Tal: ", "Talet i kvadrat: ", "Talet i kubik: ")
 for number in range (1,13,1):
     print (f"{number:<6}{number**2:<18}{number**3:<15}")
-
-#At a very dangerous workplace, the following salary is offered: on the first day you earn 0.01 euro, and then the salary doubles each day. Write a program that calculates how long you need to work in order to earn 1 million euros.
-current_day = 1
-daily_salary = 0.01
-total_money_earned_so_far = 0.01
-
-while total_money_earned_so_far < 1000000:       #Use a while loop, because you don’t know in advance how many days it will take.# target = 10 million €
-    current_day = current_day+1
-    daily_salary = daily_salary*2       #each day the salary doubles
-    total_money_earned_so_far = daily_salary + total_money_earned_so_far    #adding each day’s salary to the total.
-
-print (f"To earn 1 000 000 euros, you would need to work {current_day} days!")
-
-#Write similar program that lets you choose your goal, and by entering your daily salary lets you know how many days it will take you to surpass you goal
-goal = int(input("How much do you aim to earn?: "))
-salary = int(input("How much do you earn each day?: "))
-
-current_day = 1
-daily_salary = salary
-total_money_so_far = salary
-
-while total_money_so_far<goal:      #what will happen after every day?
-    current_day = current_day +1
-    total_money_so_far = total_money_so_far + daily_salary
-print (f"To earn {goal} € you would need to work {current_day} days!")
-
 
 #Write a program that displays a multiplication table according to the following model. The program should be designed so that you read in the number of rows to be printed. Tip: Use nested for-loops.
 #1   2   3   4   5   6   7   8   9

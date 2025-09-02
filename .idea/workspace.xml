@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad574b8-88f2-43fe-b1af-8c9ddaf4765f" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/ExercisesAugust-25.iml&#10;#&#9;.idea/runConfigurations/test_py.xml" />
+    <list default="true" id="0ad574b8-88f2-43fe-b1af-8c9ddaf4765f" name="Changes" comment="updates 2.9">
+      <change afterPath="$PROJECT_DIR$/whileloops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#3Exercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/#3Exercises.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/if-elif-else.py" beforeDir="false" afterPath="$PROJECT_DIR$/if-elif-else.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/merwhilefor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,27 +41,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.#1Exercises.executor&quot;: &quot;Run&quot;,
-    &quot;Python.#4Exercises.executor&quot;: &quot;Run&quot;,
-    &quot;Python.#4Exercises.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.#4Questions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ExercisesAugust-25.executor&quot;: &quot;Run&quot;,
-    &quot;Python.new.executor&quot;: &quot;Run&quot;,
-    &quot;Python.repetition.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testcode.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tezt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.#1Exercises.executor": "Run",
+    "Python.#4Exercises.executor": "Run",
+    "Python.#4Exercises.py.executor": "Run",
+    "Python.#4Questions.executor": "Run",
+    "Python.ExercisesAugust-25.executor": "Run",
+    "Python.new.executor": "Run",
+    "Python.repetition.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test.py.executor": "Run",
+    "Python.testcode.executor": "Run",
+    "Python.tezt.executor": "Run",
+    "Python.whileloops.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
-  <component name="RunManager" selected="Python.ExercisesAugust-25">
+}]]></component>
+  <component name="RunManager">
     <configuration name="ExercisesAugust-25" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ExercisesAugust-25" />
       <option name="ENV_FILES" value="" />
@@ -215,13 +223,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.merövningar" />
       <item itemvalue="Python.ExercisesAugust-25" />
       <item itemvalue="Python.#3Exercises" />
       <item itemvalue="Python.#4Exercises" />
       <item itemvalue="Python.#4Exercises.py" />
       <item itemvalue="Python.#4Questions" />
       <item itemvalue="Python.if-elif-else" />
-      <item itemvalue="Python.merövningar" />
     </list>
     <recent_temporary>
       <list>
@@ -321,7 +329,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1756797507472</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="updates 2.9">
+      <option name="closed" value="true" />
+      <created>1756797581667</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1756797581667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -343,6 +358,7 @@
     <MESSAGE value="changes 29.8" />
     <MESSAGE value="changes 1.9" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/ExercisesAugust-25.iml&#10;#&#9;.idea/runConfigurations/test_py.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/ExercisesAugust-25.iml&#10;#&#9;.idea/runConfigurations/test_py.xml" />
+    <MESSAGE value="updates 2.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates 2.9" />
   </component>
 </project>
