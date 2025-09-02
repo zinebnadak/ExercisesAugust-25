@@ -1,43 +1,25 @@
+1. Skriv ett program som låter användaren ange en multiplikationstabell och sedan skriver ut denna. Använd en while-loop.
+Vilken tabell? 9
 
+1 * 9 = 9
+2 * 9 = 18
+3 * 9 = 27
+...
+10 * 9 = 90
 
-#Write a program that reads in integers n and calculates sum, 1+2+3+4+...+n
-print()
-n = int(input("Enter value for n: "))
-sum = 0  #the sum is 0 in beginning
-k = 1  #start from number 1, k is used to keep track of the current number in summation
+Antag att vitsordet i en kurs bestäms av ett antal inlämningsuppgifter. Maxpoäng i varje inlämningsuppgift är 10 poäng. Om det till exempel finns 4 inlämningsuppgifter kommer alltså varje uppgift att bidra med 25% av det totala vitsordet.
+Skriv ett program som låter användaren skriva in poäng för en studerande och sedan beräknar den totala procenten. Använd en while-loop för att läsa in poängen från inlämningsuppgifterna. Loopen ska uppdatera en variabel som innehåller summan av de hittills inlästa poängen. Programmet ska låta användaren mata in poäng ända tills bokstaven a anges. Vi antar att användaren endast skriver in numeriska värden mellan 0-10, och a. Programkörningen kan t.ex. se ut enligt nedanstående:
 
-while k <= n:
-    #the new values of sum and k after each loop
-    sum = sum + k  #adds value of k to sum
-    k= k+1         #then add k (1) for next time
-print ("The sum is:", sum)
+Skriv in poäng för varje uppgift, avsluta med 'a'
+Uppgift 1: 6
+Uppgift 2: 10
+Uppgift 3: 9
+Uppgift 4: 10
+Uppgift 5: a
 
----------> #Write a program that reads in integers n and calculates sum, 1+4+9+16+...+n^2
-print()
-n = int(input("Enter value of n: "))
+Totalpoäng: 35/40 => 87.5%
 
-sum = 0
-k = 1
-
-while k <= n:
-#new values for sum and k:
-    sum=sum+(k*k)           #add square of k to the current value of sum)
-    k=k+1
-print ("The sum is", sum)
-
----------> #Suppose a ball is dropped onto a floor and with each bounce it loses 30% of its height. Write a program that calculates how many times such a ball bounces before it comes to rest. (By “comes to rest,” we mean that it no longer bounces higher than 1 cm.) As input, the program should let the user specify the height, measured in meters, from which the ball is dropped.
-height = float(input("Enter the height you are trowing the ball from (in meters):" ))
-
-start_height = height   # Save the initial height before it changes to use it in print at the end
-times_bounced = 0  #start from 0 bounced
-
-while height >= 0.01:      #keep looping and register bounces and stop when height is 1 cm
-    times_bounced = times_bounced +1
-    height = height*0.7
-
-print (f"If you drop a ball from {start_height} meters it will bounce {times_bounced} times, before stopping. ")
-
-
+2. Skriv ett program som skriver ut de fem första multiplikationstabellerna (1*1 till 10*5). Använd en nästlad while-loop.
 ---------------> #Write a program that reads in the last integer( n) and calculates sum, 1+4+9+16+...+n^2, but this time use for-loop instead of while loop.
 
 #iterate trough the numbers from 1 to n
@@ -52,15 +34,6 @@ for i in range (1,n+1,1):               #range(1, n+1) The sequence will go up t
     sum= sum+(i*i)
 
 print(f"The sum of squares from 1 to {n} is: {sum}")
-
-
-
-
-
-
-
-
-
 
 
 
@@ -144,30 +117,6 @@ print ("Tal: ", "Talet i kvadrat: ", "Talet i kubik: ")
 for number in range (1,13,1):
     print (f"{number:<6}{number**2:<18}{number**3:<15}")
 
-#At a very dangerous workplace, the following salary is offered: on the first day you earn 0.01 euro, and then the salary doubles each day. Write a program that calculates how long you need to work in order to earn 1 million euros.
-current_day = 1
-daily_salary = 0.01
-total_money_earned_so_far = 0.01
-
-while total_money_earned_so_far < 1000000:       #Use a while loop, because you don’t know in advance how many days it will take.# target = 10 million €
-    current_day = current_day+1
-    daily_salary = daily_salary*2       #each day the salary doubles
-    total_money_earned_so_far = daily_salary + total_money_earned_so_far    #adding each day’s salary to the total.
-
-print (f"To earn 1 000 000 euros, you would need to work {current_day} days!")
-
-#Write similar program that lets you choose your goal, and by entering your daily salary lets you know how many days it will take you to surpass you goal
-goal = int(input("How much do you aim to earn?: "))
-salary = int(input("How much do you earn each day?: "))
-
-current_day = 1
-daily_salary = salary
-total_money_so_far = salary
-
-while total_money_so_far<goal:      #what will happen after every day?
-    current_day = current_day +1
-    total_money_so_far = total_money_so_far + daily_salary
-print (f"To earn {goal} € you would need to work {current_day} days!")
 
 
 #Write a program that displays a multiplication table according to the following model. The program should be designed so that you read in the number of rows to be printed. Tip: Use nested for-loops.
@@ -193,4 +142,11 @@ for i in range (1,rows+1,1):        #row+1 to include the row user wants
 age = int(input("Enter your age: "))
 can_vote: bool =age >= 18       #if age is greater than or equal to 18 the result is True, otherwise False
 print ("Can vote?", can_vote)  #can_vote is printed in True or False (bool)
+
+
+3. Förbättra "Merry-go-round" genom att lägga till en nästlad loop så att
+Programmet endast accepterar y eller n som giltig input
+Om användaren skriver in annan input ska programmet skriva ut ett felmeddelande och upprepa frågan Go again? (y/n)
+
+4. Skriv ett program som skriver ut de fem första multiplikationstabellerna (1*1 till 10*5). Använd en nästlad for-loop.
 
