@@ -120,3 +120,66 @@ elif minutes >66:
     print("Buy a Plus package!")
 else:
     print ("Please enter a valid number for minutes!")
+
+
+#8 (and/or/not) Write a program that asks the user two yes/no questions:
+#Is the traffic light green? (yes / no)
+#Is there a pedestrian crossing? (yes / no)
+
+#Your program should decide whether the car can GO or must STOP based on these rules:
+#If the light is green and there is no pedestrian, print "You can go!"
+#If the light is green but there is a pedestrian, print "Wait for pedestrian!"
+#If the light is not green or there is a pedestrian, print "Stop!"
+print()
+trafic_light = input("Is the traffic light green? (yes / no): ").lower()
+pedestrian = input ("Is there a pedestrian crossing? (yes / no): ").lower()
+
+if trafic_light == "yes" and pedestrian =="no":
+    print ("You can go!")
+elif trafic_light == "yes" and pedestrian == "yes":
+    print("Wait for pedestrian!")
+elif trafic_light == "no":
+    print ("STOP!")
+else:
+    print("Invalid input. Please type 'yes' or 'no'.")
+
+
+# 9. (Using Boolean) Logged in check:
+# Ask the user: “Are you logged in? (yes/no)”
+# Store the answer in a boolean variable (True or False).
+# If logged in → message "Welcome back!"
+# If not → message "Please log in first!"
+
+logged = input("Are you logged in? (yes/no): ").lower()
+
+is_logged_in = (logged == "yes")
+
+if is_logged_in == True:          #this True-step is unneccesary bcs is_logged_in is already True or False
+    print ("welcome back!")
+
+else:
+    print ("Please log in.")
+
+#10 (Using Pass-command) Password Strength Checker
+# Write a program that asks the user for a password.
+# Your program should:
+# If the password length is less than 6 → just use pass "Password is weak"
+# If the password length is between 6 and 10 → print (don’t print anything )..
+# If the password length is more than 10 → print "Password is strong".
+# Then add a line that prints: "Good password, Please remeber your password or write it down!"
+
+password = input("Please, enter a password (at least 10 characters): ")
+
+if (len(password)) < 6:
+    print ("Password is weak")
+
+elif 6 <= (len(password)) >= 10:
+    pass
+
+elif (len(password)) > 10:
+    print("password is strong")
+    print ("Good password, Please remember your password or write it down!")
+
+
+
+
