@@ -133,7 +133,30 @@ while table <= 5:  # controls table
     print()  # blank line after each table
     table = table + 1       #By placing table = table + 1 after the inner loop, the outer loop will: Start with table = 1, Run the inner loop for table = 1, Then increment → table = 2.
 
-#9
+
+
+#9 Number Guessing Game: Pick a secret number in your code. Ask the user to guess a number until they get it right. Stop the loop immediately when the correct number is guessed (use break).
+secret_num= 3
+
+guess = int(input("Guess the secret number from 1-10: "))           #the first question is only asked once like this
+
+while True:
+    guess = int(input("Guess again!: "))                            #the second question is different than the first if user don´t get it right, question inside loop repeats.
+    if guess == secret_num:
+        break
+
+print(f"Congratulations! The secret number was {secret_num}!")
+
+
+
+#10 Odd Numbers Printer: Start counting from 1 up to 20. Use a loop to go through the numbers. Skip printing even numbers (use continue). Only print the odd numbers.
+i=0
+
+while i<20:
+    i = i + 1
+    if i%2==0:
+        continue
+    print(i)
 
 
 

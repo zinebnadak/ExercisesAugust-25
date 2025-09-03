@@ -14,7 +14,6 @@
 
 
 
-
 print()
 name = "Zineb"
 chars = list(name)
