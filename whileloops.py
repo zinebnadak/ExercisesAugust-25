@@ -54,6 +54,99 @@ days=current_day % 365
 print(f"For you to reach {goal}€, you´ll have to work {years} years and {days} days!")
 
 
+#5 Write a program that lets the user specify a multiplication table and then prints it out. Use a while loop.
+
+table = int(input("Enter desired multiplication table: "))
+
+variable = 1
+answer = table
+
+while variable>table:
+    answer=variable*table
+    variable=variable+1
+
+    print (f"{variable}*{table}={answer}")
+
+#6 Write a program that lets the user specify a multiplication table and then prints it out. Use a while loop.
+
+table = int(input("Enter desired multiplication table: "))
+variable = 0
+while variable <= table:
+    while variable < 9:
+        variable = variable + 1
+        answer = variable * table
+        print(f"{variable}*{table}={answer}")
+
+#7 Suppose that the grade in a course is determined by a number of assignments. The maximum score on each assignment is 10 points. If, for example, there are 4 assignments, each assignment will contribute 25% of the total grade. Write a program that lets the user enter scores for a student and then calculates the total percentage. Use a while loop to read the scores from the assignments. The loop should update a variable that contains the sum of the scores entered so far. The program should allow the user to enter scores until the letter ‘a’ is entered. We assume that the user only enters numerical values between 0–10, and ‘a’.
+print ("Enter points for student, end with \"a\": ")
+
+Assignment = 1          #first Assignment number
+points = 0              #No input from user yet
+Total_points = 0        #No calculations of sum of points yet
+
+
+points = input(f"Assignment {Assignment}: ")            #read input as a string
+
+while points != "a":
+    points = int(points)                #covert safely to integer to do calculations ,only if input is not "a"
+    Total_points = Total_points + points
+
+    Assignment = Assignment +1
+    points = input(f"Assignment {Assignment}: ")
+
+Max_ponits = (Assignment-1)*10
+Score_percentage = (Total_points/Max_ponits)*100
+
+print()
+print (f"Totalpoints: {Total_points}/{Max_ponits} or {Score_percentage}% ")
+
+#for more efficient code use while True and break statement
+print ("Enter points for student, end with \"a\": ")
+Assignment = 1
+Total_points = 0
+
+while True:
+    points = input(f"Assignment {Assignment}: ")           #will ask this to user forever
+    if points == "a":                                      #breaks if user enters "a", if not...
+        break
+    points = int(points)                                   #convert user input to integer to make calculations
+    Assignment = Assignment + 1                            #next assignment updates number
+    Total_points = Total_points + points                   #updated counter to users input
+
+Max_ponits = (Assignment-1)*10                             #Assignment-1 to not count with assignment when user enters "a",  each assignment max 10 points.
+Score_percentage = (Total_points/Max_ponits)*100           #score in percentage
+
+print()
+print (f"Totalpoints: {Total_points}/{Max_ponits} or {Score_percentage:.0f}% ")      #result printed in end
+
+#8 Write a program that prints the first five multiplication tables (1×1 up to 10×5). Use a nested while loop.
+table = 1  # start from table 1
+result = 0
+
+while table <= 5:  # controls table
+    variable = 0  # reset variable for each table
+
+    while variable <= 9:  # controls variable
+        variable = variable + 1
+        result = variable * table
+        print(f"{variable} * {table} = {result}")
+    print()  # blank line after each table
+    table = table + 1       #By placing table = table + 1 after the inner loop, the outer loop will: Start with table = 1, Run the inner loop for table = 1, Then increment → table = 2.
+
+#9
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
