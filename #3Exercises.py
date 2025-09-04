@@ -1,59 +1,4 @@
 
-
-
-
-#Write a program that reads in the last integer( n) and calculates sum, 1+4+9+16+...+n^2, but this time use for-loop instead of while loop.
-print ()
-
-n = int(input("Enter the value of n: "))
-
-sum = 0
-for i in range (1,n+1,1):               #range(1, n+1) The sequence will go up to but not including n+1. This ensures that n is included in the sequence., and by default setpes is 1
-    sum= sum+(i*i)
-
-print(f"The sum of squares from 1 to {n} is: {sum}")
-
-
-#the program calculate the value of the expression 2*(x**2)-5*x+1 for each value of x in the range -10 to 10, and prints result in a neat way.
-print()
-print()
-
-print (f"{"x":<4}{"Result":<10}")   #Left-align columns
-for x in range (-10,11,1):
-   result = 2*(x**2)-5*x+1
-   print (f"{x:<4} {result:<10}")    # Print the result in a table format
-print()
-print()
-
-# increment value of x by 0.1 (a float) in range -1 to 1
-# because value increments by 0.1 (float) we will use a while loop and start from -1 instead of a for loop
-print (f"{"x":<4}{"Result":<10}")   #Left-align columns
-
-x= -1 #start at -1
-while x <=1:      #The range() function only accepts integer values for start, stop, and step. # while will Loop until x reaches 1
-   result = 2*(x**2)-5*x+1
-   print (f"{x:<4.1f} {result:<10.2f}")    # Print the result in a table format
-   x = x+0.1        # Increment x by 0.1
-
-#Nested loops: program that lets user choose number of rows that are going to be printed and for every row prints one more "+" sign is going to be printed, starting with one "+" sign at row one.
-
-rows = int(input("Enter desired number of rows: "))
-
-for i in range (1,rows+1,1):    #prints rows, eg. this loop will run amount of times entered by user
-    for j in range (1,i+1,1):   #range(1, i + 1) means that for row i (e.g., if i = 3), this loop will run from 1 to 3 (i.e., j will be 1, 2, 3).
-        print("+",end="")       #one "+" one same row, during this j row
-    print ()    #terminates current row, and changes to next row
-
-#Now reverse it : desired number of rows = number of "+" signs to be printed on first line
-rows = int(input("Enter desired number of rows: "))
-
-for i in range (rows+1,1,-1):
-    for j in range (1,i,1):
-        print ("+",end="")
-    print()
-
-# User gets to choose how big the number can possibly be and times of tries user gets. Program "thinks" of a random number within 1 and the users choice. User must guess number. If user guesses too big or too little the program will let user know. Check if the user has won or run out of attempts: The program will stop once the user guesses the correct number or runs out of tries.
-#ensure that the feedback only happens before the last attempt. After the last attempt, the program will simply print the "Sorry, you've run out of attempts" message without repeating any feedback.
 import random
 
 max_num= int(input("Enter the maximum number (from 1 to...):"))
@@ -119,4 +64,18 @@ Programmet endast accepterar y eller n som giltig input
 Om användaren skriver in annan input ska programmet skriva ut ett felmeddelande och upprepa frågan Go again? (y/n)
 
 4. Skriv ett program som skriver ut de fem första multiplikationstabellerna (1*1 till 10*5). Använd en nästlad for-loop.
+
+    print()
+    name = "Zineb"
+    chars = list(name)
+
+    for i in range(len(chars) - 1, -1, -1):
+        print(chars[i], end="")
+
+    print()
+    namn = "Mariam"
+    print(namn[5], namn[4], namn[3], namn[2], namn[1], namn[0], sep="")
+    # the reason your code prints with spaces is because print() by default inserts a space between its arguments.
+
++ i häftet
 
