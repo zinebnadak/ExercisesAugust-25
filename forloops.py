@@ -54,36 +54,123 @@ for i in range (rows+1,1,-1):      # range controls number of rows.
 # If user guesses too big or too little the program will let user know.
 # Check if the user has won or run out of attempts: The program will stop once the user guesses the correct number or runs out of tries.
 # OBS! Ensure that the feedback only happens before the last attempt. After the last attempt, the program will simply print the "Sorry, you've run out of attempts" message without repeating any feedback.
-
 import random
 
-max_num = int(input("Enter the maximum number (from 1 to...): "))
-max_tries = int(input("Choose number of tries?: "))
+max_number = int(input("Enter max number to guess from (eg. 1-...?): "))
+max_tries = int(input("Enter amount of tries: "))
 
-number = random.randint(1, max_num)
+answer= int(input(f"Guess the number between 1 and {max_number}: "))
 
-guess = int(input("Guess the number! "))
+number = random.randint(1,max_number)
 
-for i in range(0, max_tries, 1):
-    if guess < 1 or guess > max_num:
-        guess = int(input(f"Please enter a number between 1-{max_num}: "))
-        continue
-    elif guess < number:
-        print(f"The number is bigger! Attempts left {max_tries-(i+1)}/{max_tries}")
-    elif guess > number:
-        print(f"The number is smaller! Attempts left {max_tries-(i+1)}/{max_tries}")
-    else:
-        print(f"Congratz! You are right! The number was {number}!")
+for i in range (1,max_tries,1):               #now the program runs exactly three times
+    answer = int(input(f"Guess again! Attempts left {max_tries - i}/{max_tries}"))
+    if answer == number:
+        print(f"You are right! Contratulations, the number was {number}!")
         break
+    elif 1 > answer or answer > max_number:
+        print(f"Please guess a number between 1 and {max_number}")
+    elif answer > number:
+        print(f"Too big!")
+    elif answer < number:
+        print(f"Too small")
 
-    if i != max_tries-1:  # Only ask for another guess if attempts remain
-        guess = int(input("Guess again! "))
-
-else:  # Ran out of tries
-    if guess != number:
-        print(f"Sorry, you're out of tries. The number was {number}.")
+print(f"You are out of tries! The number was {number}! ")
 
 
-#7
+#7Write a program that prints a table for the numbers 1 to 12. On each row of the table, the number should be shown, as well as the number squared and the number cubed.
+
+print ("Tal:\tTalet i kvadrat:\tTalet i kubik:")
+for i in range (1,12+1,1):
+    print (f"{i:<6}\t{i**2:<16}\t{i**3:<}")
+
+
+#8Write a program that displays a multiplication table according to the following model. The program should be designed so that you read in the number of rows to be printed. Tip: Use nested for-loops.
+#1   2   3   4   5   6   7   8   9
+#2   4   6   8  10  12  14  16  18
+#3   6   9  12  15  18  21  24  27
+#4   8  12  16  20  24  28  32  36
+#5  10  15  20  25  30  35  40  45
+#6  12  18  24  30  36  42  48  54
+#7  14  21  28  35  42  49  56  63
+#8  16  24  32  40  48  56  64  72
+#9  18  27  36  45  54  63  72  81
+
+
+rows = int(input("Enter number of desired rows: "))
+
+for i in range (1,rows+1,1):            #controlls number of rows
+    for j in range (1,rows+1,1):           #controlls number through row
+        print(f"{i*j:^3}", end="")                  #loop variable number (j) * row number (i). alignment the number "{:^3)"
+    print()
+
+#9. use Boo1 (Boolean).Is used when you want to check conditions (yes/no, on/off, 1/0). A Boolean is a data type that can only be True or False
+#Write a program that asks the user for their age and checks if they are old enough to vote (let’s say 18+). Program will always ask "Can vote?" after your input and answer True/False with the bool next to it automatically
+
+age = int(input("Enter your age: "))
+can_vote: bool = age >= 18
+
+print (f"Can you vote? {can_vote}")  #can_vote is printed in True or False (bool)
+
+# age >= 18 is a comparison that returns either True or False.
+# If age is 18 or more → True
+# If age is less than 18 → False
+# can_vote stores that result.
+
+
+#10 Improve "Merry-go-round" by adding a nested loop so that: The program only accepts y or n as valid input. If the user enters anything else, print an error message and repeat the question: Go again? (y/n)o
+
+# First prompt
+while True:
+    answer = input("🎠 WELCOME to Merry-go-round! Start? (y/n): ").lower()
+    if answer == "y":
+        break               #exit loop and jump to next while-loop
+    elif answer == "n":
+        print("Goodbye! 👋")
+        exit()
+    else:
+        print("❌ Invalid input. Please enter y or n.")
+
+# Loop: only show "Merry go around!" from here on
+while True:
+    print("Merry go around!")
+
+    while True:
+        answer = input("Go again? (y/n): ").lower()
+        if answer == "y":
+            break  # Repeat the outer loop "Merry go again"
+        elif answer == "n":#11 Write a program that prints the first five multiplication tables (1×1 to 10×5). Use a nested for-loop.
+            print("Ok, bye 👋")
+            exit()
+        else:
+            print("❌ Error! Please answer y or n.")
+
+
+#11.Write a program that prints the first five multiplication tables (1×1 to 10×5). Use a nested for-loop.
+#Write a program that prints the first five multiplication tables (1×1 to 10×5). Use a nested for-loop.
+
+for i in range (1,5+1,1):        #rows
+
+    for j in range (1,10+1,1):   #numbers 1-10
+
+        print(f"{i}x{j}={i*j}",end="\t")       #row number * current loop number j, print all on same line, tab spacing after each loop for alignment
+
+    print()                       #new row after loop j finish
+
+   
+# Ask the user to enter a sentence. Use split() to separate the words and print each word on a new line.
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+
+print("Here are the words in your sentence:")
+for i in words:
+    print(i)
+
+
+
+
+
+
+
 
 
