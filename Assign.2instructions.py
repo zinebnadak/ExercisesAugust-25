@@ -2,13 +2,11 @@
 Inlämningsuppgift 2: Iteration och slumptal.
 
 1. Turtle Graphics
-
-Python erbjuder ett bibliotek turtle med stöd för denna typ av grafikprogrammering.
-
-skapa en teckning, följande krav bör uppfyllas:
+krav bör uppfyllas:
 Rita upp minst två olika typer av figurer
 Alla figurer ska bestå av mer än en enda cirkel eller rektangel. Exempel på lämpliga figurer kan vara träd, stjärnor, hus, människor, snögubbar…
 Samma figur ska upprepas flera gånger.
+
 Låt användaren ange hur många figurer av olika slag som ska ritas upp.
 Använd loopar för att placera ut figurerna upprepade gånger.
 utnyttja random för att variera placeringen och utseendet på dina figurer (storlek etc).
@@ -31,6 +29,9 @@ Figurernas placering och stjärnornas storlek kan variera här slumpmässigt.
 * Random: Varje gång du kör koden får du en ny unik rymdscen.
 * Flera figurer: Inte bara en typ, utan en hel liten värld.
 * Nästlade loopar: Används för stjärnor och ev. galax.
+
+
+
 
 
 
