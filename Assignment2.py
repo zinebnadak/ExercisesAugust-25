@@ -4,48 +4,30 @@
 import turtle
 import random
 
+#screen and background
 screen = turtle.Screen()
-screen.bgcolor("black")     #bg is for background
+screen.colormode(255)       # Set color mode to accept 0–255 RGB values. HEX number do not need this!
+screen.bgcolor((25,24,84))     #bg stands for background, HEX number (#191854)
 
 #stars
 stars_num = int(input("Enter number of stars!: "))
 
-#create the turtle
-star = turtle.Turtle()     #our turtle that is going to draw for us
-star.color("yellow")
-star.pensize(35)
+#create the turtle for star
+star = turtle.Turtle()     #our turtle that is going to draw stars for us
+star.color((240,201,5))
+star.pensize(5)
 star.speed(2)
 star.hideturtle()
 
-def draw_star (x,y,size, color):
-    star.penup()
-    star.goto(x, y)
-    star.setheading(0)
-    star.pendown()
-    star.color(color)
-    for _ in range(5):      #draw five pointed star
-        star.forward(size)
+
+for i in range (1,stars_num+1):
+    for x in range (5):     #draw five pointed star
+        star.forward(50)    #determines star size
         star.right(144)
 
-for i in range(1, stars_num + 1):
-    x = random.randint(-300, 300)       # Random x (screen width)
-    y = random.randint(0, 300)          # Only upper half (y > 0)
-    size = random.randint(20, 70)       # Random size for fun
+turtle.done()
 
-
-
-
-
-
-
-
-#for i in range (1,stars_num+1):
-    #for x in range (5):     #draw five pointed star
-        #star.forward(100)
-        #star.right(144)
-
-
-
+#i want the users desired number of stars to be printed randomly  on upper half of sheet
 
 
 
