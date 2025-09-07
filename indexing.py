@@ -45,7 +45,30 @@ else:
 #Todays date: yyyy/mm/dd
 #Current time: hh:mm:ss
 
+#7 Assume variable "a" is assigned name and personnumber for a person:
+# a = "Zineb Nadak 990314-2714"
+# you now nónly want to pick out the birthdate "990314" and put it into a new variable "b"
 
+#8 Change last exercise so you get the birthdate in format dd/mm (so 14/03)
+
+#9 Write a program that reads in a simple message consisting of at least two words. The program should then print out both how many words were written and how many characters (letters, digits, and other symbols) the message contains. You can assume that there is exactly one blank space between each word and that there are no blank spaces before the first or after the last word.
+
+#10 Write a program that reads in a personal identity number (the ten digits without the dash in between) and determines whether the person is a man or a woman. (The next-to-last digit is odd for men and even for women.)
+
+#11 Write a program that reads in a text and translates it into so-called “robber language.” In this language, every consonant is doubled, with an “o” inserted in between. Vowels and other characters remain unchanged. For example, the text:
+#“Hej! Kom in.”
+#is translated into:
+#“Hohejoj! Kokomom inon.”
+
+#12 Write a program that reads in two time points in the form tt:mm. The program should state how many minutes there are between the two time points. You can assume that the second time point always occurs after the first one, and at the latest within the following 24 hours.
+
+#13 A personal identity number, e.g. 561231-1234, consists of ten digits. After the birthdate, the next three digits are a birth number, and the last digit is a control digit. The control digit is calculated as follows: The first nine digits of the personal identity number are multiplied alternately by 2 and 1, starting from the left. The digits in each product are then added together, and finally, all the results are summed up. The control digit is the number that needs to be added to this sum in order to make it evenly divisible by 10.
+#Example:
+#Personal identity number 561231123 gives the following sum:
+#5 \times 2 + 6 \times 1 + 1 \times 2 + 2 \times 1 + 3 \times 2 + 1 \times 1 + 1 \times 2 + 2 \times 1 + 3 \times 2 = 10 + 6 + 2 + 2 + 6 + 1 + 2 + 2 + 6 = 37.
+#(Notice that 10 counts as 1 + 0.)
+#The control digit should then be 3, because 37 + 3 = 40 is divisible by 10.
+#Write a program that reads in a personal identity number and checks if it is correct.
 
 
 
