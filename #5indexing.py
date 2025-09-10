@@ -153,7 +153,6 @@ print (f'The message "{message}" in robber language is {result}')
 
 
 #12 Write a program that reads in two time points in the form tt:mm. The program should state how many minutes there are between the two time points. You can assume that the second time point always occurs after the first one, and at the latest within the following 24 hours.
-#12 Write a program that reads in two time points in the form tt:mm.
 # The program should state how many minutes there are between the two time points.
 # You can assume that the second time point always occurs after the first one, and at the latest within the following 24 hours.
 from jupyter_core.migrate import migrate_one
