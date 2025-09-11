@@ -11,7 +11,7 @@ for i in range (2,n,1):     #i counts with index
 print (fibonacci_seq)
 
 
-#2 Program that will ask uer to write words, count how many words user wrote, tell first word and last word
+#2 Program that will ask user to write words, count how many words user wrote, tell first word and last word
 words = input("Enter some words: ").split()
 
 print (f"You wrote {len(words)} words ")
@@ -21,6 +21,7 @@ print (f"Last word was {words[-1]}")       #To print the last word, you should a
 #3 Write program that read in integres and tell you how many are less than 0
 integers = input("Enter some integers: ").split()   #split only work on string
 
+############################################ REP ############################################
 integer = [int(i) for i in integers]     # convert each to integer by list comprehension in Python, and the square brackets ([ ]) are used to create a new list.
 
 integers_less_than_zero = []
@@ -31,7 +32,8 @@ for num in integer:
         integers_less_than_zero.append(num)
         counter = counter + 1
 
-print (f"Integers less than zero are {counter} :{" , ".join(str(num) for num in integers_less_than_zero)}")
+############################################ REP ############################################
+print (f"Integers less than zero are {counter} :{" , ".join(str(num) for num in integers_less_than_zero)}")     #convert each number to a string and then joins them with commas
 # str(num) converts each number to a string.
 # ' '.join(...) combines them into one string with spaces (or commas, if you prefer).
 # No more [], because we’re printing a formatted string, not the actual list object.
@@ -52,4 +54,53 @@ average = ((min(num)+max(num))/2)
 
 print (f"List:{" , ".join(str(i) for i in num)}\nSmallest number:{min(num)}\nBiggest number:{max(num)}\nAverage:{average}")
 
+#5 Write a program that reads in a list of integers and removes items that is 0.
+# Tip think that there can be multiple items equal to 0
+integers = input("Enter some integers: ").split()
 
+int_list = [int(i) for i in integers]
+new_l = []      #empty list
+
+for i in int_list:
+    if i == 0:
+        continue
+    new_l.append(i)
+
+print (new_l)
+
+#make code shorter with list comprehension
+integers = input("Enter some integers: ").split()
+new_l = [int(i) for i in integers if int(i) != 0]
+print(new_l)
+#It combines:
+#A for loop
+#An optional if condition
+#And the expression for each element you want in the list
+#[expression for item in iterable if condition]
+
+
+#6 create a 10x10 multiplication table
+for i in range (1,10+1):        #rows
+    for j in range (1,10+1):    #colums
+        print (f"{i}x{j}={i*j}\t\t", end="") #print values on same line
+    print()
+
+#OR as a Matrix
+a = []                      # Step 1: Create an empty list 'a'
+
+for i in range(0, 10):      # Outer loop:(10 iterations). Row i
+    a.append([])            # Step 2: begin a new empty list inside list a ,for each outer loop start
+    for j in range(0, 10):  # Inner loop: (10 iterations)
+        a[i].append((i+1)*(j+1))  # Step 3: Calculate product and append result to row i
+print(a)                   # Step 4: Print the final list 'a'
+
+#7 Write a Python program that:
+#Asks the user for the total number of prizes to distribute.
+#Asks for the number of votes each contestant got.
+#Removes contestants who got less than 10% of the total votes.
+#Distributes prizes one by one to the contestant with the current highest “score” (score = votes / (prizes already won + 1)).
+#Prints how many prizes each contestant gets.
+
+#8 Write a program that reads a number of integers and prints them out in the same order as they were read.
+# When printing, a certain number should only be printed once.
+# If the number has already been printed earlier, it should not be printed again.
