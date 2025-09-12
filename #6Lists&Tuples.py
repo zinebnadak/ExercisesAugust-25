@@ -101,6 +101,63 @@ print(a)                   # Step 4: Print the final list 'a'
 #Distributes prizes one by one to the contestant with the current highest “score” (score = votes / (prizes already won + 1)).
 #Prints how many prizes each contestant gets.
 
+# Ask for number of prizes
+prizes = int(input("How many prizes to distribute?: "))
+
+# Ask for number of contestants
+num_contestants = int(input("How many contestants: "))
+contestants = {}
+
+# Gather all contestants and their votes
+for i in range(num_contestants):
+    name = input("Enter contestant name: ")
+    votes = int(input(f"Enter number of votes for {name}: "))
+    contestants[name] = votes       #add to new tuple
+
+# Calculate total votes
+total_votes = sum(contestants.values())         #always use name"values" to fetch votes
+
+# Filter contestants who got at least 10% of total votes
+winners = {}
+for name, votes in contestants.items():
+    if votes >= 0.10 * total_votes:
+        winners[name] = votes       #add to new tuple
+
+# Initialize prize counter
+prizes_won = {name: 0 for name in winners}  #Uses each name in winners as a key,Assigns an initial value of 0 to each key (i.e., no prizes won yet)
+
+# Distribute prizes one-by-one based on score
+for p in range(prizes):
+    scores = {name: votes / (prizes_won[name] + 1) for name, votes in winners.items()}      #dictionary comprehension, calculating a "score" for each contestant still in the running. Why divide by (prizes_won[name] + 1) - It reduces the score of contestants who have already won prizes, so the next prizes go to people who are under-rewarded.
+    winner = max(scores, key=scores.get)        #Finds the name of the contestant with the highest current score. Find the name whose score is the highest
+    prizes_won[winner] += 1                     #Add 1 prize to the winner's count. This changes the denominator for that person in the next round, so someone else might win.
+
+# Print final prize distribution
+print("Prize distribution:")
+for name, count in sorted(prizes_won.items(), key=lambda x: x[1], reverse=True):        #see explanation below
+    print(f"{name}: {count}")       #This prints each contestant and how many prizes they got:
+
+# sorted(..., key=lambda x: x[1], reverse=True): This sorts the items based on the number of prizes (the count), from highest to lowest.
+#prizes_won.items() : This gives you all the name → count pairs from the dictionary
+# key=lambda x: x[1]: Sort by the second item in the tuple (i.e., the count)
+# reverse=True: Sort in descending order (highest first)
+
+
+
+
+
+
+
 #8 Write a program that reads a number of integers and prints them out in the same order as they were read.
 # When printing, a certain number should only be printed once.
 # If the number has already been printed earlier, it should not be printed again.
+integers = input("Enter some integers: ").split()       #so that for loop reads one number at a time
+
+integers = [int(i) for i in integers]           #convert to integers and create a list
+used_integers = []                              #put used integers inside this list
+
+for i in integers:
+    if i not in used_integers:
+        used_integers.append(i)
+
+print (used_integers)
