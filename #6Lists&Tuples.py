@@ -144,10 +144,6 @@ for name, count in sorted(prizes_won.items(), key=lambda x: x[1], reverse=True):
 
 
 
-
-
-
-
 #8 Write a program that reads a number of integers and prints them out in the same order as they were read.
 # When printing, a certain number should only be printed once.
 # If the number has already been printed earlier, it should not be printed again.

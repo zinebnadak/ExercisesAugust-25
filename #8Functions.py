@@ -129,7 +129,40 @@ print(f"Average of list: {average(my_list)}")
 print (f"Average of tuple: {average(my_tuple)}")
 
 
-#8 övningar till
+#9 Create functions that simulates a deck of playing cards. It includes:
+# Creating a standard 52-card deck as tuples of (suit, rank)
+# Shuffling the deck randomly
+# Drawing (removing) the top card from the deck
+# Displaying a card’s suit and rank in readable form
+import random
 
+def new():          #creates a new, shuffeled play of 52 cards represented as tuples (suit, rank).
+    play =[]
+    for i in range (1,5):       #4 suits
+        for j in range (1,14):  #13 ranks
+            play.append((i,j))  #add each card as tuple (suit, rank) in the empty list
+    random.shuffle(play)        #shuffle the deck of cards
+    return play
 
+def give(play):     #give the top card in play of cards
+    if len(play) > 0:
+        return play.pop()
+    else:
+        return None     ## Return None if the deck is empty
+
+color = ("♣️", "♦️", "♥️", "♠️")
+rank =("E","2","3","4","5","6","7","8","9","10","kn","D","K")
+
+def show(c,last="\n"):      #writes out card "k" in readable format
+    f, v = c                #This unpacks the tuple, f is suit index (1–4), v is rank index (1–13), c is a card tuple
+    print(color[f-1], rank[v-1], end=last)      #Suits are stored in the color list, Ranks are stored in the rank list. Since Python uses 0-based indexing, we subtract 1. f = 1 → color[0] → gives the first suit (e.g., "♣")
+
+# Create a new shuffled deck
+play = new()
+
+# Draw the top card
+card = give(play)
+
+# Show the drawn card
+show(card)
 
